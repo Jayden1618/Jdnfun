@@ -188,7 +188,83 @@ print (c, end = "")
 
 print()
 ______________
+############
+# Matrix Definition
+A = [[10, 20, 30], 
+     [40, 50, 60], 
+     [70, 80, 90]]
 
+print("Matrix A:")
+for r in A:
+    for c in r:
+        print(c, end=" ")
+    print()
+
+# Row-wise Sum
+print("\nSum of all elements Row-wise:")
+for i in range(3):
+    row_sum = 0
+    for j in range(3):
+        row_sum += A[i][j]
+    print(f"Sum of Row {i} is: {row_sum}")
+
+# Column-wise Sum
+print("\nSum of all elements Column-wise:")
+for i in range(3):
+    col_sum = 0
+    for j in range(3):
+        col_sum += A[j][i]
+    print(f"Sum of Column {i} is: {col_sum}")
+
+# Sum of all diagonal elements
+diag_sum = 0
+for i in range(3):
+    diag_sum += A[i][i]
+print(f"\nSum of all diagonal elements is: {diag_sum}")
+
+# Operations on Two Matrices
+print("\nOperations on Two Matrices:")
+B = [[1, 0, 0], 
+     [0, 1, 0], 
+     [0, 0, 1]]
+
+print("Matrix B:")
+for r in B:
+    for c in r:
+        print(c, end=" ")
+    print()
+
+# Addition of Two Matrices
+C = [[0, 0, 0], 
+     [0, 0, 0], 
+     [0, 0, 0]]
+for i in range(3):
+    for j in range(3):
+        C[i][j] = A[i][j] + B[i][j]
+
+print("\nA + B:")
+for r in C:
+    for c in r:
+        print(c, end=" ")
+    print()
+
+# Multiplication of Two Matrices
+M = [[0, 0, 0], 
+     [0, 0, 0], 
+     [0, 0, 0]]
+for i in range(3):
+    for j in range(3):
+        sum = 0
+        for k in range(3):
+            sum += A[i][k] * B[k][j]
+        M[i][j] = sum
+
+print("\nA * B:")
+for r in M:
+    for c in r:
+        print(c, end=" ")
+    print()
+---------
 A = [10, 21, 30, 45, 50]
 print("A =", A)
 
