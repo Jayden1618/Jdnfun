@@ -63,3 +63,45 @@ arr = [12, 11, 13, 5, 6, 7]
 print("Given array is:", arr)
 merge_sort(arr)
 print("Sorted array is:", arr)
+
+
+______________
+
+A = [10, 21, 30, 45, 50]
+print("A =", A)
+
+n = len(A)
+print("Total number of elements in A =", n)
+
+sum = 0
+for x in range(n):
+    sum = sum + A[x]
+print("Sum of all Elements of A =", sum)
+
+max_n = max(A)
+print("Maximum Element =", max_n)
+
+min_n = min(A)
+print("Minimum Element =", min_n)
+
+even_n = 0
+odd_n = 0
+for x in range(n):
+    if A[x] % 2 == 0:
+        even_n = even_n + 1
+    else:
+        odd_n = odd_n + 1
+print("Total Even numbers in A =", even_n)
+print("Total Odd numbers in A =", odd_n)
+
+num = int(input("Enter the number to be searched: "))
+flag = 0
+for x in A:
+    if num == x:
+        flag = 1
+        break
+
+if flag == 1:
+    print("The element is present in the array A.")
+else:
+    print("The element is not present in the array A.")
