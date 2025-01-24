@@ -64,7 +64,129 @@ print("Given array is:", arr)
 merge_sort(arr)
 print("Sorted array is:", arr)
 
+############
+A=[[10,20,30], [40,50,60], [70,80,90]]
 
+print("A")
+
+for r in A:
+
+for c in r: print (c,end = "")
+
+print()
+
+#Row-wise Sum
+
+print()
+
+print("Sum of all elements Row-wise:")
+
+for i in range (3):
+
+sum=0
+
+for j in range (3): sum=sum+A[i][j] print("Sum of Row",i," is:", sum)
+
+#Column-wise Sum
+
+print()
+
+print("Sum of all elements Column-wise:")
+
+for i in range (3):
+
+sum=0
+
+for j in range (3): sum=sum+A[j][i] print("Sum of Column", i," is:", sum)
+
+#Sum of all diagonal elements.
+
+sum=0
+
+for i in range (3):
+
+for j in range (3): if(i==j): sum=sum+A[i][j]
+
+print()
+
+print("Sum of all diagonal elements is: ",sum)
+print()
+
+print("Operations on Two Matrices:") A=[[10,20,30], [40,50,60], [70,80,90]]
+
+print("A: ")
+
+for rin A:
+
+for c in r:
+
+print (c,end= "")
+
+print()
+
+print()
+
+B=[[1,0,0], [0,1,0], [0,0,1]]
+
+print("B: ")
+
+for rin B:
+
+for c in r:
+
+print (c, end = "")
+
+print()
+
+print()
+
+C=[[0,0,0], [0,0,0], [0,0,0]]
+
+#Addition of Two Matrices
+
+for i in range (3):
+
+for j in range (3):
+
+C[i][j]=A[i][j]+B[i][j]
+
+print("A+B:")
+
+for r in C:
+
+for c in r:
+
+print (c, end = "")
+
+print()
+
+print()
+
+#Multiplication of Two Matrices
+
+M=[[0,0,0], [0,0,0], [0,0,0]]
+
+for i in range (3):
+
+for j in range (3):
+
+sum=0
+
+for k in range (3):
+
+sum=sum+A[i] [k] *B[k] [j]
+
+M[i][j]=sum
+
+print("A*B:")
+
+for rin M:
+
+for c in r:
+
+print (c, end = "")
+
+print()
 ______________
 
 A = [10, 21, 30, 45, 50]
