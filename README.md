@@ -1,28 +1,14 @@
-declare
+when 3 then dbms_output.put_line('Wednesday'); 
 
-sname varchar2(20); 
+when 4 then dbms_output.put_line('Thursday'); 
 
-grade char(1); 
+when 5 then dbms_output.put_line('Friday'); 
 
-begin 
+when 6 then dbms_output.put_line('Saturday'); 
 
-sname:='&name'; 
+when 7 then dbms_output.put_line('Sunday'); 
 
-grade:='&grade'; 
-
-case grade 
-
-when 'a' then dbms_output.put_line('remarks : excellent'); 
-
-when 'b' then dbms_output.put_line(' remarks : very good'); 
-
-when 'c' then dbms_output.put_line(' remarks : well done'); 
-
-when 'd' then dbms_output.put_line(' remarks : you passed'); 
-
-when 'f' then dbms_output.put_line(' remarks : better try again'); 
-
-else dbms_output.put_line(' remarks : no such grade'); 
+elsedbms_output.put_line('not a valid week day number'); 
 
 end case; 
 
