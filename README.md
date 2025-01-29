@@ -1,26 +1,30 @@
 declare
 
-studid number; days number; fine number; 
+sname varchar2(20); 
 
-begin
+grade char(1); 
 
-studid:=&studid; 
+begin 
 
-days:=&days; 
+sname:='&name'; 
 
-if days < 7 then 
+grade:='&grade'; 
 
-fine:=0; 
+case grade 
 
-else
+when 'a' then dbms_output.put_line('remarks : excellent'); 
 
-fine:=days-7; 
+when 'b' then dbms_output.put_line(' remarks : very good'); 
 
-end if; 
+when 'c' then dbms_output.put_line(' remarks : well done'); 
 
-dbms_output.put_line('student id number -> '||studid); 
+when 'd' then dbms_output.put_line(' remarks : you passed'); 
 
-dbms_output.put_line('fine to be paid -> '||fine); 
+when 'f' then dbms_output.put_line(' remarks : better try again'); 
+
+else dbms_output.put_line(' remarks : no such grade'); 
+
+end case; 
 
 end;
 
