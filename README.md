@@ -1,3 +1,17 @@
+declare
+
+d number; 
+
+begin
+
+d:=&weekday1to7; 
+
+case d
+
+when 1 then dbms_output.put_line('Monday'); 
+
+when 2 then dbms_output.put_line('Tuesday');
+
 when 3 then dbms_output.put_line('Wednesday'); 
 
 when 4 then dbms_output.put_line('Thursday'); 
