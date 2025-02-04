@@ -1,31 +1,57 @@
-declare
+#include <iostream>
 
-d number; 
+using namespace std;
 
-begin
+class array 
 
-d:=&weekday1to7; 
+{
 
-case d
+private:
 
-when 1 then dbms_output.put_line('Monday'); 
+ int arr[5]; 
 
-when 2 then dbms_output.put_line('Tuesday');
+public:
 
-when 3 then dbms_output.put_line('Wednesday'); 
+ void initializearray()
 
-when 4 then dbms_output.put_line('Thursday'); 
+ {
 
-when 5 then dbms_output.put_line('Friday'); 
+ for (int i = 0; i < 5; i++) 
 
-when 6 then dbms_output.put_line('Saturday'); 
+ {
 
-when 7 then dbms_output.put_line('Sunday'); 
+ arr[i] = i * 10; 
 
-elsedbms_output.put_line('not a valid week day number'); 
+ }
 
-end case; 
+ }
 
-end;
+ void displayarray() {
 
-/
+ cout << "One-dimensional array: ";
+
+ for (int i = 0; i < 5; i++)
+
+ {
+
+ cout << arr[i] << " ";
+
+ }
+
+ cout << endl;
+
+ }
+
+};
+
+main() 
+
+{
+
+ array handler;
+
+ handler. initializearray();
+
+ handler.displayarray(); 
+
+}
