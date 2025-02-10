@@ -34,3 +34,19 @@ select * into r_contact from student where id = student_id;
 dbms_output.put_line(r_contact.name || ' ' || r_contact.mobile || ' ' || r_contact.email);
 exception when others then dbms_output.put_line(sqlerrm);
 end;
+
+
+set serveroutput on
+declare
+student_id number;
+procedure print_contact(student_id number) as r_contact student%rowtype;
+begin
+select * into r_contact from student where id = student_id;
+dbms_output.put_line(r_contact.name || ' ' || r_contact.mobile || ' ' || r_contact.email);
+exception when others then dbms_output.put_line(sqlerrm);
+end;
+
+Begin
+student_id := &number;
+print_contact(student_id);
+end;
