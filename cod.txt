@@ -5,3 +5,32 @@ name varchar2(10),
 mobile varchar2(10),
 email varchar2(25)
 );
+
+----------------------------
+
+create or replace procedure val_ins1(
+s_name in varchar2,
+s_mobile in varchar2,
+s_email in varchar2
+) is
+begin
+insert into student values (seq_stud.nextval, s_name, s_mobile, s_email);
+commit;
+end val_ins1;
+
+
+
+exec val_ins1('aditya', '9786541235', 'aditya@gmail.com');
+exec val_ins1('sanika', '7894563218', 'sanika@gmail.com');
+exec val_ins1('rutuja', '7835563218', 'rutuja@gmail.com');
+exec val_ins1('ela', '9754563218', 'ela@gmail.com');
+exec val_ins1('janak', '7385563218', 'janak@gmail.com');
+
+
+set serveroutput on
+create or replace procedure print_contact(student_id number) is r_contact student%rowtype;
+begin
+select * into r_contact from student where id = student_id;
+dbms_output.put_line(r_contact.name || ' ' || r_contact.mobile || ' ' || r_contact.email);
+exception when others then dbms_output.put_line(sqlerrm);
+end;
