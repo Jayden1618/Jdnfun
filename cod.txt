@@ -1,0 +1,7 @@
+set serveroutput on
+create table student (
+id number(5),
+name varchar2(10),
+mobile varchar2(10),
+email varchar2(25)
+);
